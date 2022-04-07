@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+:root {
+    --navedu-blue: #4d9de0;
+    --navedu-black: rgb(5, 5, 5);
+}
+
+a {
+    color: inherit;
+}
+
+.nav-item {
+    margin-left: .2em;
+    margin-right: .2em;
+}
+
+.nav-link {
+    text-transform: capitalize;
+    background-color: transparent;
+    border-radius: 100px;
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+    color: white;
+}
+
+.nav-link:focus {
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-dark {
+    background-color: var(--navedu-black) !important;
+}
+
+.nbtn-light {
+    background-color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: var(--navedu-black);
+    border-radius: 100px;
+    padding: .5em 1em .5em 1em;
+}
+
+.nbtn-light a {
+    text-decoration: none;
+    color: var(--navedu-black);
+}
+
+.nbtn-light:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.navbar-toggler {
+    font-size: 1em !important;
+    line-height: inherit !important;
+    border: none;
+}
+
+.navbar-toggler:focus {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.nbtn-dark {
+    background-color: var(--navedu-black);
+    text-transform: capitalize;
+    text-decoration: none;
+    border: var(--navedu-black);
+    border-radius: 100px;
+    padding: .5em 1em .5em 1em;
+    color: white;
+}
+
+.nbtn-dark i {
+    text-decoration: none;
+    color: white;
+}
+
+.nbtn-dark a {
+    text-decoration: none;
+    color: white;
+}
+
+.nbtn-dark:hover {
+    background-color: rgb(35, 35, 35);
+}
+
+.hero-container {
+    background-image: url(espresso-bg.webp);
+    background-size: cover;
+    height: 75vh;
+}
+
+.hero-text-container {
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 4em;
+    max-width: 720px;
+}
+
+.footer-container {
+    background-color: var(--navedu-black);
+    color: white;
+}
+
+.footer-container ul {
+    padding: 0;
+    list-style: none;
+}
