@@ -1,0 +1,375 @@
+/*
+Theme Name:         Navedu Technologies
+Theme URI:          https://navedu.dk/
+GitHub Theme URI: 	Navedu/Navedu_wp_theme
+Description:        Theme for Navedu Technologies
+Author:             Navedu Technologies
+Author URI:         https://navedu.dk/
+Version:            0.0.1
+*/
+
+@-ms-viewport {
+    width: device-width;
+}
+
+:root {
+    --bg-color: rgb(252, 252, 252);
+    --header-bg-color: white;
+    --header-bg-color-scrolled: rgba(255, 255, 255, 0.95);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --dark-shadow: rgba(0, 0, 0, 0.3);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+*,
+html,
+body {
+    font-family: "Didact Gothic", sans-serif;
+}
+
+
+/* For Wordpress */
+
+body.admin-bar #wpadminbar {
+    top: 0px;
+    position: fixed;
+    color: black;
+    background-color: lightgray;
+}
+
+#wpadminbar .ab-empty-item,
+#wpadminbar a.ab-item,
+#wpadminbar>#wp-toolbar span.ab-label,
+#wpadminbar>#wp-toolbar span.noticon {
+    color: black;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+bi {
+    width: 1em;
+    height: 1em;
+}
+
+footer {
+    box-shadow: 0px -4px 10px var(--shadow-color);
+    background-color: var(--header-bg-color);
+    z-index: 100;
+}
+
+.socials {
+    padding: 0.5em;
+}
+
+.footer-img {
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background-color: var(--header-bg-color);
+    box-shadow: 0px 4px 10px var(--shadow-color);
+    transition: height 150ms ease-in-out;
+    z-index: 100;
+}
+
+.header-btn {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 2px 2px 5px var(--shadow-color);
+    color: white !important;
+    font-size: 1.25em !important;
+}
+
+.header-btn:hover {
+    border: 1px solid transparent !important;
+    box-shadow: inset 2px 2px 5px var(--shadow-color);
+}
+
+.header-scrolled {
+    height: 100px;
+    background-color: var(--header-bg-color-scrolled);
+}
+
+.navbar {
+    height: 100%;
+}
+
+.hero {
+    height: fit-content;
+    max-height: calc(100vh - 150px);
+    overflow: hidden;
+    box-shadow: 0 5px 10px var(--shadow-color);
+}
+
+.carousel .item img {
+    max-height: 20px !important;
+    min-width: auto !important;
+}
+
+.header-container {
+    height: 100%;
+    padding: 0 !important;
+}
+
+.navbar-toggler {
+    margin-right: 1em !important;
+}
+
+.social-contact {
+    font-size: 1.1em;
+}
+
+.navbar-brand {
+    height: 100%;
+    padding: 0 0 0 0.5em !important;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+}
+
+.navbar-brand>img {
+    white-space: nowrap;
+    display: block;
+    height: 80%;
+}
+
+.content {
+    margin-top: 150px;
+    z-index: 0;
+}
+
+.nav-item {
+    text-align: right;
+}
+
+.hero-container {
+    position: relative;
+    text-align: center;
+}
+
+.thumb-img {
+    object-fit: cover !important;
+    aspect-ratio: 1;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-item {
+    min-height: 100% !important;
+    width: 100% !important;
+}
+
+.carousel-inner {
+    border-radius: 2em !important;
+    overflow: hidden !important;
+}
+
+.thumb-img-listing {
+    object-fit: cover !important;
+    aspect-ratio: 1;
+    height: 100% !important;
+    width: 100%;
+}
+
+.hero-text {
+    z-index: 50;
+    width: 75% !important;
+    position: absolute;
+    color: white;
+    text-align: center;
+    transform: translate(-50%, 50%);
+    stroke-width: 1px;
+    left: 50%;
+    bottom: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0.25em;
+    box-shadow: 4px 4px 10px var(--shadow-color);
+    padding: 2em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 5px var(--dark-shadow) !important;
+}
+
+.hero-short-text {
+    font-size: 1.75em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin-bottom: 2rem;
+    height: 4.5em !important;
+}
+
+.item-short-desc {
+    line-height: 1.25em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin-bottom: 2rem;
+    height: 3.75em;
+}
+
+.hero>.img-fluid {
+    width: 100% !important;
+}
+
+.hero .navbar-collapse {
+    padding-right: 2em;
+}
+
+.item-container {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container-404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+}
+
+.text-404 {
+    color: black;
+    text-align: center;
+}
+
+.pagination {
+    justify-content: center;
+    font-weight: bold;
+}
+
+.search-field {
+    width: 100%;
+    padding: 0.25em;
+    padding-left: 1em;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 1px 1px 3px var(--shadow-color);
+}
+
+.search-field:focus-visible {
+    outline: none;
+    box-shadow: inset 1px 1px 3px var(--shadow-color);
+}
+
+.footer-widget-right h2 {
+    font-size: 1.5em !important;
+}
+
+
+/* Phone mediaquery */
+
+@media screen and (max-width: 576px) {
+    .nav-menu {
+        display: none;
+    }
+    .mobile-burger-menu {
+        display: inline;
+    }
+    .hero-short-text {
+        overflow: hidden;
+        font-size: 1em;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        margin-bottom: 2rem;
+    }
+    h2 {
+        font-size: 6.5vw !important;
+        font-weight: bold;
+    }
+    .item-listed {
+        text-align: center;
+    }
+    .hero-text p {
+        font-size: initial;
+    }
+    .hero-text {
+        padding: 1em;
+    }
+}
+
+
+/* Tablet mediaquery */
+
+@media screen and (max-width: 767px) {
+    footer>.row {
+        text-align: center;
+    }
+    footer .img-fluid {
+        height: 150px !important;
+    }
+    .navbar-collapse {
+        background-color: white;
+        box-shadow: 0px 5px 5px var(--shadow-color);
+    }
+    .hero-short-text {
+        overflow: hidden;
+        font-size: 1.25em;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        margin-bottom: 2rem;
+    }
+    h1 {
+        font-size: 2em !important;
+    }
+}
+
+
+/* Desktop mediaquery */
+
+@media screen and (min-width: 929px) {
+    h1 {
+        font-size: 3em !important;
+    }
+    h2 {
+        font-size: 4em !important;
+    }
+    h5 {
+        font-size: 1.5em !important;
+    }
+    button {
+        font-size: 1em !important;
+    }
+    p {
+        font-size: 1em;
+    }
+    .item-short-desc {
+        font-size: 1em;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
