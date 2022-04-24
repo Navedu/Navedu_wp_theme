@@ -3,16 +3,10 @@
 
 
 
-    <div class="container h-100 pb-5 pt-5">
-        <h1>
-            <?php
-                the_title();
-            ?>
-        </h1>
+    <div class="m-0 p-0">
         <?php
-        the_content();
-    ?>
-
+            the_content();
+        ?>
     </div>
 
 </div>
