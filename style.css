@@ -5,7 +5,7 @@ GitHub Theme URI: 	Navedu/Navedu_wp_theme
 Description:        Theme for Navedu Technologies
 Author:             Navedu Technologies
 Author URI:         https://navedu.dk/
-Version:            0.0.1
+Version:            1.0.0
 */
 
 @-ms-viewport {
@@ -114,9 +114,8 @@ a:hover {
 }
 
 .hero-container {
-    background-image: url(espresso-bg.webp);
     background-size: cover;
-    height: 75vh;
+    height: 60vh;
 }
 
 .hero-text-container {
@@ -164,4 +163,10 @@ a:hover {
 
 .navbar-brand {
     width: 200px;
+}
+
+.container-404 {
+    height: 75vh;
+    background-color: rgb(51, 51, 51);
+    color: white;
 }

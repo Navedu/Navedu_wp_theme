@@ -3,7 +3,7 @@
 
 
 
-    <div class="container h-100 pb-5" style="padding-top: 200px;">
+    <div class="container h-100 pb-5 pt-5">
         <h1>
             <?php
                 the_title();

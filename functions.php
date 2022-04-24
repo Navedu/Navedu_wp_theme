@@ -117,27 +117,22 @@ function bare_menus(){
 add_action('init', 'bare_menus');
 
 
-function bare_register_styles(){
+function navedu_enqueue_styles_scripts(){
     $version = wp_get_theme()->get('Version');
-    wp_enqueue_style('bare-stylesheet', get_template_directory_uri()."/style.css", array('bare-bootstrap', 'bare-bootstrap-icons'), $version, 'all');
-    wp_enqueue_style('bare-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css", array(), '5.1.3', 'all');
-    wp_enqueue_style('bare-bootstrap-icons', "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css", array(), '1.8.1', 'all');
-    
-    wp_enqueue_style('aos-animations', "https://unpkg.com/aos@2.3.1/dist/aos.css", array(), '2.3.1', 'all');
+
+    // Styles
+    wp_enqueue_style('navedu-stylesheet', get_stylesheet_uri(), array('navedu-bootstrap', 'navedu-bootstrap-icons'), $version);
+    wp_enqueue_style('navedu-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css", array(), '5.1.3');
+    wp_enqueue_style('navedu-bootstrap-icons', "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css", array(), '1.8.1');
+    wp_enqueue_style('aos-animations', "https://unpkg.com/aos@2.3.1/dist/aos.css", array(), '2.3.1');
+
+    // Scripts
+    wp_enqueue_script('navedu-bootstrap-popper', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js',array(), '5.1.3');
+    wp_enqueue_script('aos-animations-script', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1');
+    wp_enqueue_script('navedu-script', get_template_directory_uri().'/assets/js/script.js',array('navedu-bootstrap-popper'), $version);
 }
 
-add_action('wp_enqueue_scripts', 'bare_register_styles');
-
-function bare_register_scripts(){
-    $version = wp_get_theme()->get('Version');
-    wp_enqueue_script('bare-bootstrap-popper', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js',array(), '5.1.3', true);
-    
-    wp_enqueue_script('aos-animations-script', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1', true);
-    
-    wp_enqueue_script('bare-script', get_template_directory_uri().'/assets/js/script.js',array('bare-bootstrap-popper'), $version, true);
-}
-
-add_action('wp_enqueue_scripts', 'bare_register_scripts');
+add_action('wp_enqueue_scripts', 'navedu_enqueue_styles_scripts');
 
 function get_post_block_galleries_images( $post_id ) {
 	$content = get_post_field( 'post_content', $post_id );
@@ -172,7 +167,7 @@ function the_email(){
 function navedu_widgets_init() {
 	register_sidebar( array(
     'name'          => __( 'Footer 1', 'navedu' ),
-    'id'            => 'sidebar-1',
+    'id'            => 'sidebar-footer-1',
     'description'   => __( 'Add widgets here to appear in your footer.', 'navedu' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',
@@ -181,7 +176,7 @@ function navedu_widgets_init() {
   ));
   register_sidebar( array(
     'name'          => __( 'Footer 2', 'navedu' ),
-    'id'            => 'sidebar-2',
+    'id'            => 'sidebar-footer-2',
     'description'   => __( 'Add widgets here to appear in your footer.', 'navedu' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',
@@ -190,7 +185,7 @@ function navedu_widgets_init() {
   ));
   register_sidebar( array(
     'name'          => __( 'Footer 3', 'navedu' ),
-    'id'            => 'sidebar-3',
+    'id'            => 'sidebar-footer-3',
     'description'   => __( 'Add widgets here to appear in your footer.', 'navedu' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',
@@ -199,7 +194,7 @@ function navedu_widgets_init() {
   ));
   register_sidebar( array(
     'name'          => __( 'Footer 4', 'navedu' ),
-    'id'            => 'sidebar-4',
+    'id'            => 'sidebar-footer-4',
     'description'   => __( 'Add widgets here to appear in your footer.', 'navedu' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',
@@ -207,8 +202,17 @@ function navedu_widgets_init() {
     'after_title'   => '</h2>',
   ));
   register_sidebar( array(
-    'name'          => __( 'Footer 5', 'navedu' ),
-    'id'            => 'sidebar-5',
+    'name'          => __( 'Footer Copyright', 'navedu' ),
+    'id'            => 'sidebar-footer-copyright',
+    'description'   => __( 'Add widgets here to appear in your footer.', 'navedu' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ));
+  register_sidebar( array(
+    'name'          => __( 'Frontpage Hero', 'navedu' ),
+    'id'            => 'sidebar-fp-hero',
     'description'   => __( 'Add widgets here to appear in your footer.', 'navedu' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',

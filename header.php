@@ -32,29 +32,28 @@
                     <img src="<?php echo $logo[0] ?>" class="header-img" alt="NAVEDU" class="d-inline-block align-text-top">
                 </a>
                 <div class="navbar-toggler">
-                    <button class="nbtn-dark">
+                <button class="nbtn-dark">
                         <i class="bi bi-handbag"></i>
                     </button>
-                    <button class="nbtn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-manu"
-                        aria-controls="main-manu" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="nbtn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="bi bi-list"></i>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="main-menu">
                     <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'main-menu',
-                        'container' => false,
-                        'menu_class' => '',
-                        'fallback_cb' => '__return_false',
-                        'items_wrap' => '<ul id="%1$s" class="navbar-nav me-auto mb-2 mb-md-0 %2$s">%3$s</ul>',
-                        'depth' => 2,
-                        'walker' => new bootstrap_5_wp_nav_menu_walker()
-                    ));
+                        wp_nav_menu(array(
+                            'theme_location' => 'main-menu',
+                            'container' => false,
+                            'menu_class' => '',
+                            'fallback_cb' => '__return_false',
+                            'items_wrap' => '<ul id="%1$s" class="navbar-nav me-auto mb-2 mb-md-0 %2$s">%3$s</ul>',
+                            'depth' => 2,
+                            'walker' => new bootstrap_5_wp_nav_menu_walker()
+                        ));
                     ?>
                 </div>
                 <div class="container justify-content-end" style="display: flex;">
-                    <button class="nbtn-light">
+                    <button class="nbtn-light d-none d-lg-block">
                         <a href="mailto:kontakt@navedu.dk">Kontakt</a>
                     </button>
                     <button class="nbtn-dark d-none d-lg-block">
@@ -67,6 +66,5 @@
             </div>
         </nav>
     </header>
-</body>
 
 </html>

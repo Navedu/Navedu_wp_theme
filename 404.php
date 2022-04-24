@@ -1,32 +1,22 @@
-<div class="container-fluid h-100 p-0" style="display:flex; flex-direction: column;">
-    <?php get_header(); ?>
+<?php get_header(); ?>
 
-    <div class="container container-404">
-        <div class="text-404">
-            <a href="<?php echo home_url(); ?>">
-                <?php
-                        if(function_exists('the_custom_logo')){
-                            $custom_logo_id = get_theme_mod('custom_logo');
-                            $logo = wp_get_attachment_image_src($custom_logo_id);
-                        }
-                    ?>
-                <img src="<?php echo $logo[0] ?>" alt="" class="d-inline-block align-text-top pb-2">
-            </a>
-            <h2>404 Siden blev ikke fundet</h2>
+<div class="container-fluid p-0 container-404" style="display:flex; justify-content-center;align-items:center;">
+    <div class="container align-items-center text-center">
+        <a href="<?php echo home_url(); ?>">
+            <?php
+                if(function_exists('the_custom_logo')){
+                    $custom_logo_id = get_theme_mod('custom_logo');
+                    $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+                }
+            ?>
+            <img src="<?php echo $logo[0] ?>" alt="" width="25%" class="d-inline-block align-text-top pb-2">
+            <h2 class="mt-4">404 - Siden blev ikke fundet</h2>
             <p>
-                <b>
-                    Du finder ingen møbler her...
-                </b>
+                Denne side findes ikke, vælg venligt et andet sted fra menuen i toppen eller tryk her for
+                at gå tilbage til forsiden.
             </p>
-            <p>
-                <a href="<?php echo home_url(); ?>">
-                    Denne side findes ikke, vælg venligt et andet sted fra menuen i toppen eller tryk her for
-                    at gå tilbage til forsiden.
-                </a>
-            </p>
-        </div>
+        </a>
     </div>
-
-
-    <?php get_footer(); ?>
 </div>
+
+<?php get_footer(); ?>

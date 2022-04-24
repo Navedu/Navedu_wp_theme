@@ -8,7 +8,7 @@
 
 <body>
     <div class="container-fluid content p-0">
-        <div class="container-lg pt-5">
+        <div class="container-lg">
             <?php
                 if( have_posts() ) {
                     while( have_posts() ){
