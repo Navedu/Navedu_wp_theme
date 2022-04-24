@@ -2,9 +2,9 @@
 /**
  * Functions file for Navedu Technologies.
  */
-?>
 
-<?php
+
+ 
 /**
  * Meta boxes in posts for:
  * Price
