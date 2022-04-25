@@ -1,4 +1,4 @@
-<div class="p-5"></div>
+<div class="p-3"></div>
 
 <h1>
     <?php echo the_title(); ?>
