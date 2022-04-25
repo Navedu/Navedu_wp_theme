@@ -35,7 +35,7 @@
                 <button class="nbtn-dark">
                         <i class="bi bi-handbag"></i>
                     </button>
-                    <a href="/shop">
+                    <a href="/cart">
                         <button class="nbtn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                             <i class="bi bi-list"></i>
                         </button>
@@ -59,7 +59,7 @@
                         <a href="mailto:kontakt@navedu.dk">Kontakt</a>
                     </button>
 
-                    <a href="/shop">
+                    <a href="/cart">
                         <button class="nbtn-dark d-none d-lg-block">
                             <i class="bi bi-handbag"></i>
                         </button>
