@@ -300,4 +300,46 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
   }
 }
 
+/**
+ * Returns a product list of WooCommerce products. Intended to be called
+ * by a shortcode `[thenga_product_list]`.
+ *
+ * @return string
+ */
+function thenga_render_product_list() {
+  // Fetch the products.
+  $products = new WP_Query( array(
+
+     /*
+      * We're limiting the results to 100 products, change this as you
+      * see fit. -1 is for unlimted but could introduce performance issues.
+      */
+     'posts_per_page' => 100,
+     'post_type'      => 'product',
+     'post_status'    => 'publish',
+     'order'          => 'ASC',
+     'orderby'        => 'title',
+
+  ) );
+
+  $html = '<ol>';
+
+  while ( $products->have_posts() ) {
+     $products->the_post();
+
+     $html .= sprintf(
+        '<li><a href="%1$s">%2$s</a></li>',
+        esc_url( get_the_permalink() ),
+        esc_html( get_the_title() )
+     );
+  }
+
+  $html .= '</ol>';
+
+  wp_reset_postdata();
+
+  return $html;
+}
+add_shortcode( 'thenga_product_list', 'thenga_render_product_list' );
+
 ?>
