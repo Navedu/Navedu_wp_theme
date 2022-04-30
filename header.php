@@ -32,14 +32,14 @@
                     <img src="<?php echo $logo[0] ?>" class="header-img" alt="NAVEDU" class="d-inline-block align-text-top">
                 </a>
                 <div class="navbar-toggler">
-                <button class="nbtn-dark">
-                        <i class="bi bi-handbag"></i>
-                    </button>
                     <a href="/cart">
-                        <button class="nbtn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="bi bi-list"></i>
+                        <button class="nbtn-dark">
+                            <i class="bi bi-handbag"></i>
                         </button>
                     </a>
+                    <button class="nbtn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-list"></i>
+                    </button>
                 </div>
                 <div class="collapse navbar-collapse" id="main-menu">
                     <?php
